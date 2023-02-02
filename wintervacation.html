@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주세현/60160478/기초웹프로그래밍 과제 #3</title>
+    <style>
+        li{
+            width: 300;
+        }
+    </style>
+</head>
+<body onload="create()">
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    <p>겨울 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li id="1">자전거로 대한민국 일주</li>
+        <li id="2">책 100권 읽기</li>
+        <li id="3">철인 3종 경기 준비</li>
+        <li id="4">자바 스크립트 정복</li>
+    </ul>
+    <div id="textDiv" style="position: absolute"></div>
+    <script>
+        var description = ["빨간 자전거를 타고 서울, 대전, 대구, 부산 찍고, 목표, 인천을 거쳐 달린다.",
+        "나의 일상 생활에 도움이 되는 책 100원을 읽는다.",
+    "수영이 부족하니 수영 연습을 더 열심히한다.",
+"자바 스크립트를 복습한다."];
+        var textDiv;
+        function create(){
+			textDiv = document.getElementById("textDiv");	
+			var list = document.getElementsByTagName("li");
+            
+			for(i=0; i<list.length; i++)
+			{
+				list[i].addEventListener("mouseover", show, false);
+				list[i].addEventListener("mouseout", hide, false);
+			}	
+		}
+
+        function showtextbox(text, obj){
+			textDiv.innerHTML = text;	
+			textDiv.style.width = "200px";
+			textDiv.style.height = "70px";
+			textDiv.style.left = obj.clientX + "px";
+			textDiv.style.top = obj.clientY + "px";
+			textDiv.style.border = "1px solid green";
+			textDiv.style.background = "skyblue";
+			textDiv.style.visibility = "visible";
+		}
+
+		function show(obj)	{
+			var n = 0;
+			if (obj.target.id == "1")
+				n = 0;
+			else if (obj.target.id == "2")
+				n = 1;
+			else if (obj.target.id == "3")
+				n = 2;
+			else if (obj.target.id == "4")
+				n = 3;
+
+			showtextbox(description[n], obj);
+		}
+
+		function hide(){
+			textDiv.style.visibility = "hidden";
+		}
+    </script>
+</body>
+</html>

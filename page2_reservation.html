@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주세현/60160478/기초웹프로그래밍 과제 #4</title>
+    <link href="artbelly.css" type="text/css" rel="stylesheet">
+    <script src="artbelly.js" defer></script>
+
+
+</head>
+<body>
+    <h2>모노레일 예약</h2>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>개인정보</legend>
+            사용자 ID : <input type="text" id="name"><br><br>
+            비밀번호 : <input type="password" id="password"><br><br>
+            email : <input type="email" placeholder="email@naver.com" id="email"><br>
+
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>예약정보</legend>
+            이용 날짜 : <input type="date" id="date"><br><br>
+            이용 시간대 : <input type="text" list="am_pm" id="time"><br>
+            <datalist id="am_pm">
+                <option value="오전">
+                <option value="오후">
+            </datalist>
+            <label for="one_way">편도</label>
+            <input type="radio" name="booking" id="one_way" value="편도">
+            <label for="round">왕복</label>
+            <input type="radio" name="booking" id="round" value="왕복"><br>
+            <h3 id="oneOrRound"></h3>
+            <br>
+            어린이 : <input type="number" min="0" max="10" step="1"><br><br>
+            어른 : <input type="number" min="0" max="10" step="1"><br><br>
+            기타 문의사항 : <textarea cols="80" rows="4"></textarea>
+            <h2 id="wordsNum"></h2>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>동의서 </legend>
+            <h4>개인 정보 이용에 대해 동의하십니까?</h4><br>
+            동의 : <input type="radio" name ="personal" value="1">
+            비동의 : <input type="radio" name = "personal" value="2"><br><br>
+            <h4>이용 예약 시간으로 부터 24시간 내에 취소하면 취소 수수료가 발생합니다. 동의하십니까?</h4><br>
+            동의 : <input type="radio" name="cancel" value="1">
+            비동의 : <input type="radio" name="cancel" value="2">
+
+        </fieldset>
+        <br><br>
+        <button type="reset">취소</button>
+        <button type="submit" id="output" onclick="check_info()">예약</button>
+        <fieldset>
+            <div id="result_output">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

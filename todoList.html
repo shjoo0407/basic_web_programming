@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>할일 목록</h2>
+    <input id="todo" placeholder="할 일을 입력해주세요.">
+    <button id="add">추가하기.</button>
+    <div id="todo_list"></div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            var input = document.getElementById('todo');
+            var button = document.getElementById('add');
+            var todo_list = document.getElementById('todo_list');
+
+            var keyCount = 0
+
+            function addTodo(){
+                console.log("시작")
+                if (input.value.trim == null){
+                    alert('할 일을 입력해주세요.');
+                    return
+                }
+                const item = document.createElement('div')
+                const checkbox = document.createElement('input')
+                const text = document.createElement('span')
+                const button = document.createElement('button')
+
+                const key = keyCount;
+                keyCount += 1;
+
+                item.setAttribute('data-key',key)
+                item.appendChild(checkbox)
+                item.appendChild(text)
+                item.appendChild(button)
+                todo_list.appendChild(item)
+
+                checkbox.type = 'checkbox'
+                checkbox.addEventListener('change',(event)=>{
+                    item.style.textDecoration = event.target.checked?'line-through':''
+                })
+                text.textContent = input.value;
+
+                button.textContent = '제거하기';
+                button.addEventListener('click',()=>{
+                    removeTodo(key)
+                })
+
+                input.value = '';
+            
+            function removeTodo(key){
+                const item = document.querySelector(`[data-key = "${key}"]`)
+                todo_list.removeChild(item)
+            }
+
+            button.addEventListener('click',addTodo())
+            input.addEventListener('keyup',(event)=>{
+                const ENTER = 13
+                if (event.keyCode === ENTER){
+                    addTodo()
+                }
+            })
+
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그 전체 연습</title>
+
+
+</head>
+<body>
+    <h3>폼 태그 전체 연습</h3>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>개인정보</legend>
+            사용자 ID : <input type="text"><br><br>
+            비밀번호 : <input type="password"><br><br>
+            email : <input type="email" placeholder="id@host"><br><br>
+            홈페이지 : <input type="text" placeholder="http://"><br><br>
+            전화번호 : <input type="text" placeholder="010-1234-5678"><br><br>
+            국적(input-datalist) : <input type="text"><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>메뉴 선택</legend>
+            메뉴검색 : <input type="text" placeholder="메뉴 이름"><br><br>
+            메뉴(select) : <input type="text" list="menu"><br><br>
+            <datalist id="menu">
+                <option value="짜장면">
+                <option value="짬뽕" >
+                <option value="탕수육"></datalist>
+            <input type="checkbox" name="menu1" value="1">
+                짜장면<img src="images/짜장면.png" width="150">
+            <input type="checkbox" name="menu1" value="2" >
+                짬뽕<img src="images/짬뽕.png" width="150">
+            <input type="checkbox" name="menu1" value="3">
+                탕수육<img src="images/탕수육.jpg" width="150"><br>
+                <input type="radio" name="menu1" value="4">
+                짜장면<img src="images/짜장면.png" width="150">
+            <input type="radio" name="menu1" value="5" checked>
+                짬뽕<img src="images/짬뽕.png" width="150">
+            <input type="radio" name="menu1" value="6">
+                탕수육<img src="images/탕수육.jpg" width="150"><br><br>
+            
+            배달일 : <input type="date"><br><br>
+            배달시간 : <input type="time"><br><br>
+            기타 요구사항 : <textarea cols="80" rows="4">기타 요구사항을 쓰세요.</textarea>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>환경설정</legend>
+            글자색 선택 <input type="color" value="#00BFFF"
+                onchange="document.body.style.color=this.value"><br><br>
+            웹프로그래밍 학습 시간 (0.0~10.0시간) : <input type="range" min="0" max="10">
+        </fieldset><br><br>
+    
+        <button type="reset">취소</button>
+        <button type="submit">제출</button>
+    </form>    
+</body>
+</html>

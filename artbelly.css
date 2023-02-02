@@ -1,0 +1,136 @@
+#menubar{
+    background: olive;
+}
+#menubar ul{
+    margin: 0;
+    padding: 0;
+    width: 567px;
+}
+#menubar ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding : 0px 15px;
+}
+#menubar ul li a{
+    color: white;
+    text-decoration: none;
+}
+#menubar ul li a:hover{
+    color : violet;
+    font-size: 110%;
+}
+
+.table_title{
+    background: yellow;
+    color: red;
+}
+#number_tab{
+    background: wheat;
+}
+
+strong{
+    background: yellow;
+}
+.introduce:hover{
+    font-size: 110%;
+    color: darkgreen;
+}
+p span{
+    text-align: center;
+    display: inline-block;
+    border: 1px dotted blue;
+    background: powderblue;
+    margin: 10px;
+    width: 120px;
+    height: 30px;
+    color: red;
+    font-size: 105%;
+    border-radius: 20px;
+}
+h1.title{
+    width: 300px;
+    height: 50px;
+    border-width: 30px;
+    padding: 20px;
+    border: 2px dotted olive;
+    border-radius: 30px;
+    text-align: center;
+}
+
+body{
+    background-size: 100px;
+    background-image: url(images/slime.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+h1.title{
+    text-shadow: 3px 3px 5px olive;
+}
+div.gather{
+    position : absolute;
+}
+div img{
+    position: absolute;
+}
+#천주호{z-index: -3; left: 10px; top:20px;}
+#천문과학관{z-index: 2; left: 60px; top:30px;}
+#조각공원{z-index: 3; left: 1100px; top:40px;}
+#돌음계단{z-index: 7; left: 160px; top:50px;}
+#모노레일{z-index: 10; left: 210px; top:60px;}
+
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse ;
+}
+thead{
+    background : skyblue;
+    color: blue;
+}
+tbody tr:nth-child(even){
+    background: antiquewhite;
+}
+td,th,tfoot{
+    height: 20px;
+    width: 500px;
+    padding: 10px;
+    text-align: center;
+}
+input[type=text]{
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+input[type=date]:hover{
+    background: skyblue;
+    font-size: 120%;
+}
+input[type=number]:hover{
+    background: skyblue;
+    font-size: 120%;
+}
+
+label{
+    display: block;
+    padding: 10px;
+    text-align: left;
+
+}
+textarea:hover{
+    background: aliceblue;
+}
+@keyframes bigger{
+    from {font-size: 100%;}
+    to {font-size: 130%;}
+}
+h2{
+    animation-name: bigger;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+fieldset{
+    margin: 20px;
+    border-radius: 20px;
+    background: powderblue;
+    border: dotted saddlebrown;
+}

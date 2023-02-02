@@ -1,0 +1,43 @@
+<!-- 기말시험: 문서객체모델과 이벤트 핸들러 활용 -->
+
+<!DOCTYPE html>
+<html lang='kor'>
+<head>
+  <meta charset="UTF-8">
+  <title>기말 - 주세현/60160478</title>
+  <style>
+    div.small { width:180px;
+                height:80px;
+                float:left;
+                margin:5px;
+                padding:20px 0px;
+                background-color: yellowgreen;
+                font-size:24px;
+                font-weight:bold;
+                text-align:center; }
+    div#big { width:600px;
+              height:150px; }
+    #score { clear:both;  
+             padding: 50px 20px;
+             width: 550px; }
+  </style>
+  <script src='final.js' async></script>
+</head>
+
+<body>
+  <h2>영단어 맞추기 게임</h2>
+  <p>박스를 클릭하여 한글 단어를 본 후, <br/>
+     박스를 더블클릭하면 영단어를 입력할 수 있습니다.</p>
+
+  <div id="big" >
+    <div class="small" id="0" ></div>
+    <div class="small" id="1" ></div>
+    <div class="small" id="2" ></div>
+    <div class="small" id="3" ></div>
+    <div class="small" id="4" ></div>
+    <div class="small" id="5" ></div>
+  </div>
+
+  <h2 id='score'></h2>
+</body>
+</html>

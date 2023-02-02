@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주세현/60160478/기초웹프로그래밍 과제 #4</title>
+    <link href="artbelly.css" type="text/css" rel="stylesheet">
+    <script src="artbelly.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="title" onmouseover="over(this)" onmouseout="out(this)">포천 아트밸리</h1>
+    </header>
+    <nav id="menubar">
+        <ul>
+            <li><a href="#">포천 아트밸리 소개 및 역사</a></li>
+            <li><a href="#">주요 시설</a></li>
+            <li><a href="#">주변 관광지</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2><a id = "intro">포천 아트밸리 소개 및 역사</a></h2>
+            <p class="introduce">
+               포천 아트밸리는 역사, 생태 및 문화 콘텐츠가 융합된 
+               전 세계 유일의 패채석장 업사이클링 관광지 입니다.
+            </p>
+            <p class="introduce">
+                과거 이곳은 국가 주요 기관 건물에 사용될 만큼 재질이
+                단단하고 아름답기로 유명한 포석천을 1960년대부터 30년간
+                채석하던 화강암 채석장이었습니다.
+            </p>
+            <div>
+               하지만, 1990년대 이후 양질의 화강암 생산량이 감소하면서 
+               패채석장으로 방치되어 황폐화 되었던 곳을 포천시가 2004년부터
+               2009년까지 친환경 복합 예술 문화공원으로 재탄생 시킨 곳이
+               <strong>'포천 아트밸리'</strong> 입니다.
+            </div>
+            <p>
+                <span>포천 아트밸리</span>는 훼손된 자연 경관을 친환경적으로 복구하고
+                일부는 과거 경관을 그대로 보존함으로써 근대산업 유산의 흔적과
+                문화예술공간을 만들어 자연을 훼손한 반성의 공간을 함께 살려낸
+                의미 있는 장소로서, 역사와 생태, 문화예술 및 교육을 한자리에서 만날 수 있는
+                전 세계 유일의 특색있는 공간입니다.
+            </p>
+        </article>
+        <hr>
+        <article>
+            <h2><a id="key_facility">주요 시설</a></h2>
+            <details>
+                <summary>자연 경관</summary>
+                <p>
+                    <ul>
+                        <li><a href="#chun">천주호</a></li>
+                        <li><a href="#sky">천문과학관</a></li>
+                    </ul>
+                </p>
+            </details>
+            <details>
+                <summary>예술 작품</summary>
+                <p>
+                    <ul>
+                        <li><a href="#sculpt">조각공원</a></li>
+                        <li><a href="#stairs">돌음 계단</a></li>
+                        <li><a href="#mono">모노 레일</a></li>
+                    </ul>
+                </p>
+            </details>
+            <figure id="1-1">
+                <figcaption><a id="chun">천주호</a></figcaption>
+                <pre>
+                    포천 아트밸리의 자랑 천주호 입니다.
+                </pre>
+                <pre>
+                    <img src="images/천주호.jpg" width="500"><br>
+                </pre>
+            </figure>
+            <hr>
+            <figure id="1-2">
+                <figcaption><a id="sky">천문과학관</a></figcaption>
+                <pre>
+                    광활한 우주를 내다볼 수 있는 천문과학관 입니다.
+                </pre>
+                <pre>
+                    <img src="images/천문과학관.jpg" width="500"><br>
+                </pre>
+            </figure>
+            <hr>
+            <figure id="2-1">
+                <figcaption><a id="sculpt">조각공원</a></figcaption>
+                <pre>
+                    아름다운 조각예술의 마을, 조각공원입니다.
+                </pre>
+                <pre>
+                    <img src="images/조각공원.jpg" width="500"><br>
+                </pre>
+            </figure>
+            <hr>
+            <figure id="2-2">
+                <figcaption><a id="stairs">돌음계단</a></figcaption>
+                <pre>
+                    아름답지만 아찔한 계단, 돌음계단입니다.
+                </pre>
+                <pre>
+                    <img src="images/돌음계단.jpg" width="500"><br>
+                </pre>
+            </figure>
+            <hr>
+            <figure id="2-3">
+                <figcaption><a id="mono">모노레일</a></figcaption>
+                <pre>
+                    포천 아트밸리의 귀여운 이동수단, 모노레일 입니다.
+                </pre>
+                <pre>
+                    <img src="images/모노레일.jpg" width="500"><br>
+                </pre>
+            </figure>
+
+        </article>
+        <hr>
+        <article>
+            <h3><a id="restaurant">주변 관광지</a></h3>
+            <table border="1" id="number_tab">
+                <caption class="table_title">포천의 맛집</caption>
+                <thead>
+                    <tr><th>식당 이름</th><th>전화 번호</th><th>주소</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>미당</td><td>031-534-2420</td><td>포천시 영북면 산정호수</td></tr>
+                    <tr><td>등심퐁당샤브퐁당</td><td>031-544-8999</td><td>포천시 소흘읍 호국로 297</td></tr>
+                    <tr><td>청수장</td><td>031-532-1114</td><td>포천시 일동면 화동로 935</td></tr>
+                    <tr><td>콩마루</td><td>031-532-2234</td><td>포천시 군내면 포천로 1501</td></tr>
+                    <tr><td>갈비 장터</td><td>031-536-3392</td><td>포천시 소흘읍 송우리 145-8</td></tr>
+                </tbody>
+            </table>
+            <br><br>
+            <table border="1" id="sightsee_tab">
+                <caption class="table_title">주변 관광지</caption>
+                <thead>
+                    <tr><th>관광지</th><th>간단한 설명</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>산정호수</td><td>산에 있는 우물이라는 뜻의 이름 그대로 맑은 수질과 아름다운 산세를 자랑하는 호수</td></tr>
+                    <tr><td>백운계곡</td><td>광덕산과 백운산 정상에서 서쪽으로 흘러내리는 깨끗한 물이 모여 이룬 골짜기</td></tr>
+                    <tr><td>평강랜드</td><td>사계절 테마가 있는 평강랜드</td></tr>
+                    <tr><td>서운동산</td><td>자연속의 전원휴양지</td></tr>
+                    <tr><td>포천 국립 수목원</td><td>대한민국 자연의 아름다움을 간직한 곳</td></tr>
+                </tbody>
+            </table>         
+        </article>
+    </section>
+    <br><hr><br>
+    <h1>가고 싶은 명소 메모하기</h1>
+    <input id="togo">
+    <button id="add-button">추가하기</button>
+    <div id="togo-list">
+
+
+    </div>
+    <hr>
+    <aside>
+        <h3><a href="page2_reservation.html" target="_blank" onclick="return query()">포천 아트밸리 모노레일 예약 바로가기.</a></h3>
+    </aside>
+    <footer>
+        <p><a href="https://artvalley.pocheon.go.kr/index.html" target="_blank">더 많은 정보를 원하신다면 포천 아트밸리 홈페이지로 오세요.</a></p>
+    
+    <h3>사진 모아보기</h3>
+    <div class="gather">
+        <img id = "천주호" src="images/천주호.jpg" width="200" alt="천주호">
+        <img id = "천문과학관" src="images/천문과학관.jpg" width="200" alt="천문과학관">
+        <img id = "조각공원" src="images/조각공원.jpg" width="200" alt="조각공원">
+        <img id = "돌음계단"src="images/돌음계단.jpg" width="200" alt="천주호">
+        <img id = "모노레일" src="images/모노레일.jpg" width="200" alt="천주호">
+    </div>
+</footer>
+</body>
+</html>

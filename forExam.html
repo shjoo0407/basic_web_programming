@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            constructor(first,last,age){
+                this.name = {
+                    first,last
+                }
+                this.age = age;
+            }
+            greeting(){
+                confirm(`Hi, I'm ${this.name.first} ${this.name.last} 입니다. `)
+
+            }
+        }
+        let person1 = new Person('Jennifer','Laurence', 25);
+        let person2 = new Person('Joo','Sehyun',26);
+        person1.greeting();
+        person2.greeting();
+
+
+        class Teacher extends Person{
+            constructor(first,last,age,subject){
+                super(first,last,age)
+                this.subject = subject
+            }
+            greeting(){
+                confirm(`Hi, I'm ${this.name.first} ${this.name.last}. I teach ${this.subject}.`)
+            }
+        }
+
+        let teacher1 = new Teacher('Kim','Doyun',24,'Science');
+        teacher1.greeting();
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>글자수를 입력하세오.</h2>
+    <hr>
+    <p></p>
+    <textarea cols="40" rows="5"></textarea>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            console.log("시작.")
+            const textarea = document.querySelector('textarea');
+            const p = document.querySelector('p');
+
+            textarea.addEventListener('keyup',()=>{
+                var length = textarea.value.length;
+                p.textContent = `입력 글자수 : ${length}`; 
+            })
+        })
+    </script>
+</body>
+</html>

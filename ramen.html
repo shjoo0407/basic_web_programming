@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주세현/60160478/기초웹프로그래밍 과제 #3</title>
+    <script>
+        function neworder(parent){
+            var order = prompt("라면을 끓이는 순서를 입력하라","");
+            if(order == null || order == "")
+                return;
+            
+            var list = document.createElement("li");
+            list.innerHTML = order;
+            parent.appendChild(list);
+        }
+    </script>
+</head>
+<body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <ol type="A" style="background-color: yellowgreen" onclick="neworder(this)">
+        <li>물을 끓인다.</li>
+    </ol>
+
+</body>
+</html>

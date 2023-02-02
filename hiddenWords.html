@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주세현/60160478/기초웹프로그래밍 과제#3</title>
+    <style>
+        span{
+            visibility:hidden;
+            color: blue;
+        }
+    </style>
+    <script>
+function change(){
+    var span = document.getElementsByTagName("span");
+    for(var i=0; i<span.length; i++)		
+    {
+		var show = span[i];
+        if (show.style.visibility == "hidden")	
+            show.style.visibility = "visible";
+        else
+            show.style.visibility = "hidden"
+	}
+}
+    </script>
+</head>
+<body>
+    <h3>다음 빈 곳에 숨은 단어?   
+        <button onclick="change()">show/hide</button></h3>
+    <hr>
+    <ul>
+        <li>I (<span> love </span>) you</li>
+        <li>CSS is Cascading (<span> Style </span>) Sheet.</li>
+        <li>응답하라 (<span> 1988 </span>)
+    </ul>
+</body>
+</html>
